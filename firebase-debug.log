@@ -1,0 +1,41 @@
+[debug] [2020-07-12T08:32:00.562Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T08:32:00.564Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2020-07-12T08:32:00.565Z] CLI Version:   8.5.0
+[debug] [2020-07-12T08:32:00.565Z] Platform:      darwin
+[debug] [2020-07-12T08:32:00.565Z] Node Version:  v10.15.0
+[debug] [2020-07-12T08:32:00.574Z] Time:          Sun Jul 12 2020 15:32:00 GMT+0700 (Western Indonesia Time)
+[debug] [2020-07-12T08:32:00.575Z] ----------------------------------------------------------------------
+[debug] [2020-07-12T08:32:00.575Z] 
+[debug] [2020-07-12T08:32:00.601Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-12T08:32:00.601Z] > authorizing via signed-in user
+[debug] [2020-07-12T08:32:00.601Z] [iam] checking project surat-desa-b7035 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-07-12T08:32:00.604Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-12T08:32:00.605Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-12T08:32:02.362Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 08:32:02 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T08:32:02.381Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/surat-desa-b7035:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-07-12T08:32:04.355Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 08:32:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1071","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T08:32:04.357Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/surat-desa-b7035  
+ 
+[debug] [2020-07-12T08:32:06.723Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 08:32:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'surat-desa-b7035'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-07-12T08:32:06.729Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/surat-desa-b7035/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-07-12T08:32:08.772Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 08:32:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[surat-desa-b7035]: beginning deploy... 
+[info] i  hosting[surat-desa-b7035]: found 14 files in dist/surat-desa 
+[debug] [2020-07-12T08:32:08.852Z] [hosting] hash cache [ZGlzdC9zdXJhdC1kZXNh] stored for 14 files
+[debug] [2020-07-12T08:32:08.852Z] [hosting][hash queue][FINAL] {"max":52,"min":1,"avg":31.785714285714285,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":63}
+[debug] [2020-07-12T08:32:08.853Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/surat-desa-b7035/versions/c458869e47ea81a5:populateFiles  
+ <request body omitted>
+[debug] [2020-07-12T08:32:10.422Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 12 Jul 2020 08:32:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-12T08:32:10.429Z] [hosting][populate queue][FINAL] {"max":1574,"min":1574,"avg":1574,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1579}
+[debug] [2020-07-12T08:32:10.429Z] [hosting] uploads queued: 7
+[debug] [2020-07-12T08:32:23.603Z] [uploadQueue] Retrying task 9f989247fc714a11a7b40c0931fe51930b431f117277c23c5622e5ed5a0f2c4a
+[debug] [2020-07-12T08:32:28.960Z] [uploadQueue] Retrying task 0acae5a4fd79315973c540ecc684ebb7b83b63de3e108b5f366fb3910b862ff4
+[debug] [2020-07-12T08:32:51.431Z] [uploadQueue] Retrying task 1deb320f0ed16cbba2b0bb27d4984ed2c491bb8d8b8caccece77a55fd8b42946
+[debug] [2020-07-12T08:33:00.350Z] [uploadQueue] Retrying task 5ea449023cd908806d496c4bdf44975262ef6a2203a1541fa64ceb415d55acee

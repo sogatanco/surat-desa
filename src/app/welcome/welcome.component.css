@@ -1,0 +1,201 @@
+.navbar-brand span{
+    font-weight: 600;
+    margin-left: 7px;
+    font-size:0.7em;
+}
+.navbar-brand img{
+    width: 20px;
+}
+.navbar{
+    letter-spacing: 1px;
+    background:transparent!important;
+}
+.nav-link{
+    color: #ffffff!important;
+    font-weight: 600;
+    font-size:0.7em;
+}
+.jumbotron{
+    background-image: url('/assets/img/welc-background.png');
+    margin-top: -60px;
+    height: 200px;
+    background-size:cover;
+    background-position: right;
+}
+
+.jumbotron .container{
+    margin-top: 40px;
+}
+h1{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+h2{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.5em;
+}
+.img-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.jumbotron .btn{
+    background-color: #50E7AC;
+    font-size: 0.5em;
+    border: none;
+    border-radius: 20px;
+}
+
+.centered{
+ margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.centered1{
+    margin: auto;
+     width: 100%;
+     padding: 0px;
+   }
+/* pricing */
+.panel1{
+    height: 60px;
+}
+.panel2{
+    height: 80px;
+}
+
+
+
+/* medium */
+@media (min-width: 768px) { 
+    .nav-link{
+        font-size:0.9em;
+    }
+    .navbar-brand span{
+        font-size:0.9em;
+    }
+    .navbar-brand img{
+        width: 25px;
+    }
+    .jumbotron{
+        background-image: url('/assets/img/welc-background.png');
+        margin-top: -60px;
+        height: 430px;
+        background-size:cover;
+        background-position: center;
+    }
+    .jumbotron .container{
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 1.7em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1em;
+    }
+    .jumbotron .btn{
+        background-color: #50E7AC;
+        font-size: 1em;
+        padding-right: 30px;
+        padding-left: 30px;
+        border: none;
+        border-radius: 20px;
+    }
+    
+}
+
+/* large */
+@media (min-width: 992px) { 
+    .nav-link{
+        font-size:1em;
+    }
+    .navbar-brand span{
+        font-size:1em;
+    }
+    .navbar-brand img{
+        width: 29px;
+    }
+    .jumbotron{
+        background-image: url('/assets/img/welc-background.png');
+        margin-top: -60px;
+        height: 550px;
+        background-size:cover;
+        background-position: right;
+    }
+    .jumbotron .container{
+        margin-top: 110px;
+    }
+    h1{
+        font-size: 2.1em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 2em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1em;
+    }
+    .jumbotron .btn{
+        background-color: #50E7AC;
+        font-size: 1em;
+        padding-right: 40px;
+        padding-left: 40px;
+        border: none;
+        border-radius: 25px;
+    }
+}
+
+/* extra large */
+@media (min-width: 1200px) { 
+    .nav-link{
+        font-size:1em;
+    }
+    .navbar-brand span{
+        font-size:1.1em;
+    }
+    .navbar-brand img{
+        width: 27px;
+    }
+    .jumbotron{
+        background-image: url('/assets/img/welc-background.png');
+        margin-top: -65px;
+        height: 800px;
+        background-size:cover;
+        background-position:right;
+        width: 100%;
+    }
+    .jumbotron .container{
+        margin-top: 180px;
+    }
+     h1{
+        font-size: 2.4em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 2.1em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1.1em;
+    }
+    .jumbotron .btn{
+        margin-top: 35px;
+        background-color: #50E7AC;
+        font-size: 1.1em;
+        padding-right: 40px;
+        padding-left: 40px;
+        border: none;
+        border-radius: 25px;
+    }
+}
+
+
+
