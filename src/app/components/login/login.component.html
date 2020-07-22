@@ -1,0 +1,59 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6 d-none d-md-block d-lg-block">
+            <img class="img-fluid ml-auto d-block biglogo" src="/assets/img/biglogo.png" alt="logo" width="170px">
+        </div>
+        <div class="col-md-6 col-12 form">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item ">
+                  <a class="nav-link active" data-toggle="tab" href="#login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#register">Register</a>
+                </li>
+              </ul>
+            
+              <!-- Tab panes -->
+              <div class="tab-content">
+
+                <div id="login" class="tab-pane active"><br>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">USERNAME</label>
+                            <input type="text" class="form-control" id="username" #email>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" class="form-control" id="password" #password>
+                        </div>
+                        <button (click)="signIn(email.value, password.value)" type="button" class="btn btn-secondary mt-3">LOGIN</button>
+                    </form>
+                </div>
+
+                <div id="register" class="tab-pane fade"><br>
+                  <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+                        <div class="form-group">
+                            <label for="username">EMAIL</label>
+                            <input type="text" class="form-control" id="username" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" class="form-control" id="password" formControlName="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="paket">PAKET</label>
+                            <select class="form-control" id="paket" formControlName="paket">
+                              <option value="365hr">365 hari</option>
+                              <option value="180hr">180 hari</option>
+                              <option value="30hr">30 hari</option>
+                            </select>
+                          </div>
+                        <button  type="submit" class="btn btn-secondary mt-3">REGISTER</button>
+                    </form>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+</div>

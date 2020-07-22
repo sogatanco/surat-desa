@@ -1,0 +1,240 @@
+.navbar-brand span{
+    font-weight: 600;
+    margin-left: 7px;
+    font-size:0.7em;
+}
+.navbar-brand img{
+    width: 20px;
+}
+.navbar{
+    letter-spacing: 1px;
+    background:transparent!important;
+}
+.nav-link{
+    color: #ffffff!important;
+    font-weight: 600;
+    font-size:0.7em;
+}
+.jumbotron{
+    background-image: url('/assets/img/welc-background.png');
+    margin-top: -60px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding-top:80px;
+    padding-bottom: 30px;
+}
+
+.img-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tombol{
+    background-color: #50E7AC;
+    font-size: 0.5em;
+    border: none;
+    border-radius: 20px;
+}
+
+.centered{
+ margin: auto;
+  width: 100%;
+  padding: 10px;
+}
+.centered1{
+    margin: auto;
+     width: 100%;
+     padding: 4px;
+   }
+.list-price{
+    position: relative;
+    height: 120px;
+}
+.price{
+    position:absolute;
+    top:25px;
+    width: 100%;
+}
+.card{
+    border-radius: 0;
+    padding-top:2vw!important;
+    padding-left: 0vw!important;
+    padding-right:0vw!important;
+    padding-bottom: 2vw!important;
+    border: none!important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bulat{
+    background: #333;
+   position: relative;
+   width: 60%;
+   padding-top: 60%;
+   border-radius: 50%;
+   margin-bottom: 15%;
+   margin-top: 15%;
+}
+.bulat h2, .bulat1 h2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  line-height:100%;
+  height:100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bulat1{
+   background: #333;
+   position: relative;
+   width: 70%;
+   padding-top: 70%;
+   border-radius: 50%;
+   margin-bottom: 20%;
+   margin-top: 20%;
+}
+.bawah{
+    background-color: #50E7AC;
+    padding-top:130px;
+    color:#fff;
+    padding-bottom: 10px;
+}
+
+
+
+/* medium */
+@media (min-width: 768px) { 
+    .nav-link{
+        font-size:0.9em;
+    }
+    .navbar-brand span{
+        font-size:0.9em;
+    }
+    .navbar-brand img{
+        width: 25px;
+    }
+    .jumbotron{
+        padding-top:140px;
+        padding-bottom: 80px;
+    }
+   
+   
+    .tombol{
+        background-color: #50E7AC;
+        font-size: 1em;
+        padding-right: 30px;
+        padding-left: 30px;
+        border: none;
+        border-radius: 20px;
+    }
+    .list-price{
+        position: relative;
+        height: 200px;
+    }
+    .price{
+        position:absolute;
+        top:30px;
+        width: 100%;
+    }
+    .bawah{
+        padding-top: 230px;
+        padding-bottom: 20px;
+    }
+
+    
+}
+
+/* large */
+@media (min-width: 992px) { 
+    .nav-link{
+        font-size:1em;
+    }
+    .navbar-brand span{
+        font-size:1em;
+    }
+    .navbar-brand img{
+        width: 29px;
+    }
+    .jumbotron{
+        padding-top:160px;
+        padding-bottom: 100px;
+    }
+    
+    .tombol{
+        background-color: #50E7AC;
+        font-size: 1em;
+        padding-right: 40px;
+        padding-left: 40px;
+        border: none;
+        border-radius: 25px;
+    }
+    .list-price{
+        position: relative;
+        height: 240px;
+    }
+    .price{
+        position:absolute;
+        top:30px;
+        width: 100%;
+    }
+    .bawah{
+        padding-top: 290px;
+        padding-bottom: 30px;
+    }
+    
+}
+
+/* extra large */
+@media (min-width: 1200px) { 
+    .nav-link{
+        font-size:1em;
+    }
+    .navbar-brand span {
+        font-size:1.1em;
+    }
+    .navbar-brand img{
+        width: 27px;
+    }
+    .jumbotron{
+        padding-top:210px;
+        padding-bottom: 150px;
+    }
+    
+     
+    .tombol{
+        margin-top: 35px;
+        background-color: #50E7AC;
+        font-size: 1.1em;
+        padding-right: 40px;
+        padding-left: 40px;
+        border: none;
+        border-radius: 25px;
+    }
+    .list-price{
+        position: relative;
+        height: 450px;
+    }
+    .price{
+        position:absolute;
+        top:130px;
+        width: 100%;
+    }
+    .bawah{
+        padding-top: 500px;
+        padding-bottom: 100px;
+    }
+
+    .bawah span{
+        font-size: 2.1em;
+        color: #fff;
+        font-weight: 600;
+    }
+   
+}
+
+
+

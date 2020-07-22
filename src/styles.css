@@ -1,6 +1,100 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap');
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body{
     font-family: 'Raleway', sans-serif;
+}
+h1{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+h2{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.5em;
+}
+h4{
+    font-size: 0.7em;
+}
+
+a:link, a:visited{
+    color:#fff;
+}
+a:hover{
+    text-decoration: none;
+    color: #E4E4E4;
+}
+.basic-container {
+    padding: 5px;
+  }
+  
+  .version-info {
+    font-size: 8pt;
+    float: right;
+  }
+  .cdk-global-overlay-wrapper {
+    align-items: flex-start !important;
+    justify-content: flex-end !important
+  }
+  
+
+@media (min-width: 768px) { 
+    h1{
+        font-size: 1.7em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 1.6em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 1em;
+    }
+}
+
+
+@media (min-width: 992px) { 
+    h1{
+        font-size: 2.1em;
+        font-weight: 800;
+    }
+    h2{
+        font-size: 2em;
+        font-weight: 600;
+    }
+    p{
+        font-size: 1em;
+    }
+    h4{
+        font-size: 1.3em;
+        letter-spacing: 2px;
+    }
+}
+
+@media (min-width: 1200px) { 
+    h1{
+        font-size: 2.4em;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    h2{
+        font-size: 2.1em;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+    h4{
+        font-size: 1.4em;
+        letter-spacing: 2px;
+    }
 }

@@ -1,0 +1,160 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/img/logo.png"  class="d-inline-block align-bottom" alt="">
+       <span>SURAT DESA</span>
+    </a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/login']">LOGIN</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- bagian atas -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 ">
+        <h1 >Bikin Surat CEPAT dan MUDAH</h1>
+        <p >Pilih surat yang mau dibuat, masukkan data, cetak dan selesai.</p>
+        <button class="btn btn-success tombol"> Mulai Sekarang</button>
+      </div>
+      <div class="col-6">
+        <img class="img-fluid img-shadow" src="/assets/img/giphy.gif" alt="gif">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- baigan 2 -->
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-6 centered">
+      <img class="img-fluid" src="/assets/img/mudahicon.png" alt="no type">
+    </div>
+    <div class="col-6 centered">
+      <h2>Tidak perlu diketik manual</h2>
+      <p>Semua format surat sudah ada di sini. Tinggal pilih jenis surat dan masukkan data yang dibutuhkan pada berang, surat siap dicetak tanpa perlu dilakukan pengetikan manual lagi. </p>
+    </div>
+  </div>
+</div>
+
+<!-- bagian 3 -->
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-6 centered">
+      <h2>Menyimpan data surat </h2>
+      <p>Setiap pembuatan surat di sini otomatis tercatat sebagai surat keluar.  Dan untuk surat masuk juga tersedia space untuk pendataannya. Sehingga catatan surat menyurat desa tidak perlu ditulis di buku.</p>
+    </div>
+    <div class="col-6 centered">
+      <img class="img-fluid" src="/assets/img/dataicon.png" alt="no type">
+    </div>
+  </div>
+</div>
+
+<!-- baigan 4 -->
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-6 centered">
+      <img class="img-fluid" src="/assets/img/nomoricon.png" alt="no type">
+    </div>
+    <div class="col-6 centered">
+      <h2>Penomoran otomatis</h2>
+      <p>Penomoran surat dilakukan secara otomatis dan berurutan. Begitu juga dengan kode desa dan kode lainnya sesuai dengan yang telah ditentukan.</p>
+    </div>
+  </div>
+</div>
+
+<div class="list-price">
+  <div class="price">
+    <div class="container">
+      <div class="row pl-3 pr-3">
+        <div class="col-4 centered1">
+          <div class="card">
+            <div class="card-body text-center">
+              <p><strong>{{pakets[0].namaPaket}}</strong></p>
+              <div class="bulat mx-auto">
+                <h2>{{pakets[0].hargaPaket}}</h2>
+              </div>
+              <button class="btn btn-success tombol">Mulai</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-4 centered1">
+          <div class="card ">
+            <div class="card-body text-center">
+              <p><strong>{{pakets[2].namaPaket}}</strong></p>
+              <div class="bulat1 mx-auto">
+                <h2>{{pakets[2].hargaPaket}}</h2>
+              </div>
+              <button class="btn btn-success tombol">Mulai</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-4 centered1">
+          <div class="card">
+            <div class="card-body text-center">
+              <p><strong>{{pakets[1].namaPaket}}</strong></p>
+              <div class="bulat mx-auto">
+                <h2>{{pakets[1].hargaPaket}}</h2>
+              </div>
+              <button class="btn btn-success tombol">Mulai</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- price -->
+<div class="bawah">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-6">
+      <img class="img-fluid" src="/assets/img/lightlogo.png" width="60%" alt="">
+      <p class="mt-3">Aplikasi pembuatan surat menyurat desa otomatis</p>
+    </div>
+    <div class="col-lg-4 col-6">
+      <h4>INFORMASI & BANTUAN</h4>
+      <p class="mt-3"><a href="#">Kebijakan Privasi</a><br>
+        <a href="#">Kebijakan Hak Cipta</a><br>
+        <a href="#">Syarat & Ketentuan</a><br>
+        <a href="#">Pertanyaan Umum</a>
+      </p>
+    </div>
+    <div class="col-lg-4 d-none d-md-none d-lg-block ">
+      <h4>METODE PEMBAYARAN</h4>
+      <div class="row mt-3">
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/prima.png"  alt="">
+        </div>
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/atmbersama.png"  alt="">
+        </div>
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/gopay.png"  alt="">
+        </div>
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/visa.png"  alt="">
+        </div>
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/mandiri.png"  alt="">
+        </div>
+        <div class="col-3 mb-3">
+          <img class="img-fluid d-block" src="/assets/img/bca.png"  alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-footer></app-footer>
