@@ -1,0 +1,17 @@
+::ng-deep .mat-autocomplete-panel {
+    max-height: 300px !important; 
+   }
+.nama{
+   font-family: 'Raleway';
+   max-height: 40px;
+}
+
+label, .card-header{
+   font-weight: 600;
+}
+
+.modal-content{
+   border-radius: 0 0 0 0;
+   border: 0px;
+   box-shadow: 5px 6px 0px rgba(0,0,0,0.8);
+}

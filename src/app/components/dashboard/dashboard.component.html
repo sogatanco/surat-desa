@@ -1,3 +1,20 @@
-<p>dashboard works!</p>
-<button class="btn btn-success" (click)="signOut()">LOGOUT</button>
-<router-outlet></router-outlet>
+<h2>Dashboard</h2>
+      <hr>
+<div class="row">
+
+      <div class="col-lg-4 col-md-6 col-12 p-4" *ngFor="let s of surats">
+            <div class="isi">
+                  <a [routerLink]="['/member/create',s.kode]">
+                        <div class="row ts">
+                              <div class="col-3 text-center pb-3 pt-3">
+                                    <strong class="text-light">{{s.kode}}</strong>
+                              </div>
+                              <div class="col-9">
+                                    {{s.nama}}
+                              </div>
+                        </div>
+                   </a>
+            </div>
+      </div>
+
+</div>

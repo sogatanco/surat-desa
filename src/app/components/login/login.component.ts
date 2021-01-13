@@ -1,7 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import {AuthService} from '../../services/auth.service';
-import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
+
 
 
 @Component({

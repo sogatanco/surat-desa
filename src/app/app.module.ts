@@ -15,7 +15,17 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MemberComponent } from './components/member/member.component';
+import { SettingComponent } from './components/setting/setting.component';
+import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { CreateSuratComponent } from './components/create-surat/create-surat.component';
+
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -27,6 +37,10 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     LoginComponent,
     DashboardComponent,
     PageNotFoundComponent,
+    MemberComponent,
+    SettingComponent,
+    EmailVerificationComponent,
+    CreateSuratComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -38,6 +52,9 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     ReactiveFormsModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    MatAutocompleteModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

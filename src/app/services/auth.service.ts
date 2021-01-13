@@ -42,6 +42,7 @@ export class AuthService {
       if(!user){
         this.router.navigate(['login']);
       }
+      this.isNoVerifiedEmail()
     });
   }
 
@@ -62,17 +63,50 @@ export class AuthService {
         password:password,
         paket:paket
       });
-      this.openSnackBar('Your Account Created Succesfully !', 'OK');
+      this.SendVerificationMail();
+      this.openSnackBar('Register akun baru berhasil', 'OK');
       this.isAuth();
     })
     .catch(error => {
       this.openSnackBar(error.message, 'OK');
     });
-    }
+  }
 
-    openSnackBar(message:string, action:string) {
+  SendVerificationMail() {
+    return this.userData.subscribe(user=>{
+      if(user.emailVerified==true){
+        this.openSnackBar('Email sudah terverifikasi', 'OK');
+      }else{
+        user.sendEmailVerification().then(res=>{
+          this.openSnackBar('Email verifikasi baru saja dikirim ,  cek kotak masuk email sekarang!', 'OK');
+        })
+        .catch(err => {
+          this.openSnackBar(err.message, 'OK');
+        });
+      }
+      
+    })
+  }
+
+  openSnackBar(message:string, action:string) {
       this.snackBar.open(message, action, {
       duration: 2500,
+    })
+  }
+
+  isNoVerifiedEmail(){
+    this.userData.subscribe(user=>{
+      if(user.emailVerified==false){
+        this.router.navigate(['member/verification']);
+      }
+    })
+  }
+
+  isVerifiedEmail(){
+    this.userData.subscribe(user=>{
+      if(user.emailVerified==true){
+        this.router.navigate(['member']);
+      }
     })
   }
 

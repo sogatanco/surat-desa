@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../../services/auth.service';
+import {SuratService} from '../../services/surat.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -7,17 +8,22 @@ import {AuthService} from '../../services/auth.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  surats:any;
 
   constructor(
-    private authService:AuthService
+    private surat:SuratService
   ) { }
 
-  signOut(){
-    this.authService.SignOut();
-  }
-
   ngOnInit(): void {
-    this.authService.isNoAuth();
+    this.surat.getAllSurats().subscribe(data=>{
+      this.surats=data.map(e=>{
+        return{
+          kode:e.payload.doc.id,
+          nama:e.payload.doc.data()['namaSurat']
+        }
+      })
+    })
+    
   }
 
 

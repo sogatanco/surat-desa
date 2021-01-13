@@ -1,0 +1,21 @@
+.isi .col-3{
+    background-color:#31353D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.isi .col-9{
+    display: flex;
+    align-items: center;
+    border-right: 3px solid #31353D;
+}
+
+.ts{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.isi a {
+    color:#696F74;
+}

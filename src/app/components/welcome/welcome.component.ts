@@ -23,7 +23,7 @@ export class WelcomeComponent implements OnInit {
           hargaPaket: e.payload.doc.data()['hargaPaket'],
         };
       })
-      console.log(this.pakets);
+      // console.log(this.pakets);
     });
   }
 }

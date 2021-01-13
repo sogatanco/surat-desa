@@ -1,0 +1,149 @@
+<h2>Setting</h2>
+<hr>
+<form [formGroup]="settingForm" (ngSubmit)="onSubmit(provinsi.options[provinsi.options.selectedIndex].id, kabupaten.options[kabupaten.options.selectedIndex].id)">
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">ALAMAT LENGKAP</div>
+            <div class="card-body" formGroupName="alamat">
+                
+                    <div class="form-group">
+                        <label for="jalan">Alamat Jalan</label>
+                        <textarea class="form-control" id="jalan" formControlName="jalan" rows="3"[ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.jalan').errors}"></textarea>
+                        <small class="form-text text-muted">Contoh : Jalan Abu di Tanoh Mirah KM 3</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="provinsi">Provinsi</label>
+                                <select class="form-control"  id="provinsi" #provinsi (change)="onProvinsiSelect(provinsi.options[provinsi.options.selectedIndex].id)" formControlName="provinsi" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.provinsi').errors}">
+                                    <option value="">Pilih Provinsi</option>
+                                    <option  *ngFor="let prov of dataprovinsi" [id]="prov.id"  [value]="prov.namaprovinsi">{{prov.namaprovinsi}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="kabupaten">Kabupaten</label>
+                                <select class="form-control" id="kabupaten" #kabupaten (change)="onKabupatenSelect(kabupaten.options[kabupaten.options.selectedIndex].id)" formControlName="kabupaten" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.kabupaten').errors}">
+                                    <option value="">Pilih Kabupaten</option>
+                                    <option  *ngFor="let kab of datakabupaten" [id]="kab.id" [value]="kab.namakabupaten">{{kab.namakabupaten}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="form-group">
+                        <label for="provinsi">Kecamatan</label>
+                        <select class="form-control" id="kecamatan" #kecamatan (change)="onKecamatanSelect(kecamatan.value, kabupaten.options[kabupaten.options.selectedIndex].id)" formControlName="kecamatan" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.kecamatan').errors}">
+                            <option value="">Pilih Kecamatan</option>
+                            <option *ngFor="let kec of datakecamatan" [value]="kec">{{kec}}</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="sebutanDesa">Sebutan Untuk Desa</label>
+                                <input type="text" class="form-control" id="sebutanDesa" formControlName="sebutanDesa" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.sebutanDesa').errors}">
+                                <small class="form-text text-muted">contoh : Desa, Gampong, Kelurahan</small>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="desa">Nama Desa</label>
+                                <select class="form-control" id="desa" #desa (change)="onDesaSelect(desa.options[desa.options.selectedIndex].id)" formControlName="desa" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.desa').errors}">
+                                    <option value="">Pilih Desa</option>
+                                    <option *ngFor="let desa of datadesa" [id]="desa.kodepos" [value]="desa.kelurahan">{{desa.kelurahan}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="sebutanDesa">Kode Pos</label>
+                                <input type="text" class="form-control" id="kodepos"  formControlName="kodepos" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.kodepos').errors}" required>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="card mt-4 mb-4">
+            <div class="card-header">KONTAK</div>
+            <div class="card-body" formGroupName="kontak">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telepon">No Telepon</label>
+                            <input type="text" id="telepon" class="form-control" formControlName="telepon" [ngClass]="{ 'is-invalid': submitted && settingForm.get('kontak.telepon').errors}">
+                            <small class="form-text text-muted">Nomor Telepon Desa</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && settingForm.get('kontak.email').errors}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- col-md-8 -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">APARATUR DESA</div>
+            <div class="card-body" formGroupName="aparatur">
+                <div class="form-group">
+                    <label for="sebutanKades">Sebutan Kades</label>
+                    <input type="text" name="" id="sebutanKades" class="form-control" formControlName="sebutanKades" [ngClass]="{ 'is-invalid': submitted && settingForm.get('aparatur.sebutanKades').errors}">
+                    <small class="form-text text-muted">contoh : Kepala Desa, Keuchik, Lurah</small>
+                </div>
+                <div class="form-group">
+                    <label for="namaKades">Nama Kades</label>
+                    <input type="text" id="namaKades" class="form-control" formControlName="namaKades" [ngClass]="{ 'is-invalid': submitted && settingForm.get('aparatur.namaKades').errors}">
+                </div>
+                <div class="form-group">
+                    <label for="namaCamat">Nama Camat</label>
+                    <input type="text" id="namaCamat" class="form-control" formControlName="namaCamat" [ngClass]="{ 'is-invalid': submitted && settingForm.get('aparatur.namaCamat').errors}">
+                </div>
+
+                <div class="form-group">
+                    <label for="sekdes">Sekretaris Desa</label>
+                    <input type="text" id="sekdes" class="form-control" formControlName="sekdes" [ngClass]="{ 'is-invalid': submitted && settingForm.get('aparatur.sekdes').errors}">
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4 mb-4">
+            <div class="card-header">ADMINISTRASI</div>
+            <div class="card-body" formGroupName="administrasi">
+                
+                <div class="form-group">
+                    <label for="kodedesa">Kode Desa</label>
+                    <input type="number" id="kodedesa" class="form-control" formControlName="kodeDesa" [ngClass]="{ 'is-invalid': submitted && settingForm.get('administrasi.kodeDesa').errors}">
+                </div>
+            
+                <div class="form-group">
+                    <label for="nomorsurat">Mulai Nomor Surat</label>
+                    <input type="number" id="nomorsurat" class="form-control" formControlName="nomorSurat" [ngClass]="{ 'is-invalid': submitted && settingForm.get('administrasi.nomorSurat').errors}">
+                </div>
+                 
+            </div>
+        </div>
+
+    </div>
+    <!-- col-md-4 -->
+</div>
+<!-- row -->
+<div class="row">
+    <div class="col-12">
+        <p><i><small>*Data yang diisi di atas sangat berpengaruh di dalam penulisan kop surat nantinya</small></i></p>
+        
+        <!-- <button class="btn btn-dark" (click)="simpanData(kecamatan.options[kecamatan.options.selectedIndex].text)">SIMPAN DATA</button> -->
+        <button class="btn btn-dark" type="submit">SIMPAN DATA</button>
+    
+    </div>
+</div>
+</form>
+
