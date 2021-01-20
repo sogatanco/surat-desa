@@ -12,13 +12,21 @@
                         <textarea class="form-control" id="jalan" formControlName="jalan" rows="3"[ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.jalan').errors}"></textarea>
                         <small class="form-text text-muted">Contoh : Jalan Abu di Tanoh Mirah KM 3</small>
                     </div>
+                    <div class="form-group">
+                        <label for="provinsi">Provinsi</label>
+                        <select class="form-control"  id="provinsi" #provinsi (change)="onProvinsiSelect(provinsi.options[provinsi.options.selectedIndex].id)" formControlName="provinsi" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.provinsi').errors}">
+                            <option value="">Pilih Provinsi</option>
+                            <option  *ngFor="let prov of dataprovinsi" [id]="prov.id"  [value]="prov.namaprovinsi">{{prov.namaprovinsi}}</option>
+                        </select>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="provinsi">Provinsi</label>
-                                <select class="form-control"  id="provinsi" #provinsi (change)="onProvinsiSelect(provinsi.options[provinsi.options.selectedIndex].id)" formControlName="provinsi" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.provinsi').errors}">
-                                    <option value="">Pilih Provinsi</option>
-                                    <option  *ngFor="let prov of dataprovinsi" [id]="prov.id"  [value]="prov.namaprovinsi">{{prov.namaprovinsi}}</option>
+                                <label for="statusKab">Status Kabupaten</label>
+                                <select class="form-control" id="statusKab" formControlName="statusKab" [ngClass]="{ 'is-invalid': submitted && settingForm.get('alamat.statusKab').errors}">
+                                    <option value="">Pilih</option>
+                                    <option value="kota">Kota</option>
+                                    <option value="kabupaten">Kabupaten</option>
                                 </select>
                             </div>
                         </div>

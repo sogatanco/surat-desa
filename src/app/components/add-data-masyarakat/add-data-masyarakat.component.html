@@ -1,0 +1,149 @@
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content p-5">
+
+        <h3 class="mb-0">Data Masyarakat</h3>
+        <small><strong>Perhatian !!!</strong> Data yang dimasukkan harus sesuai dengan KTP</small>
+
+        <form class="mt-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nama Lengkap">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="NIK (Nomor Induk Kependudukan)">
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Tempat">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" class="form-control" placeholder="Tanggal Lahir">
+                        <owl-date-time #dt1 [pickerMode]="" class="tes" [pickerType]="'calendar'"></owl-date-time>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">Jenis Kelamin</option>
+                            <option value="">Laki - Laki</option>
+                            <option value="">Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">Pilih Agama</option>
+                            <option value="">Islam</option>
+                            <option value="">Kristen</option>
+                            <option value="">Katolik</option>
+                            <option value="">Hindu</option>
+                            <option value="">Budha</option>
+                            <option value="">Kong Hu Cu</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">Status Perkawinan</option>
+                            <option value="">Belum Kawin</option>
+                            <option value="">Kawin</option>
+                            <option value="">Duda</option>
+                            <option value="">Janda</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Pekerjaan">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option value="">Golongan Darah</option>
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">AB</option>
+                            <option value="">O</option>
+                            <option value="">Tidak Tahu</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" id="jalan" formControlName="jalan" rows="2" placeholder="Alamat Sesuai KTP"></textarea>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-control"  id="provinsi" #provinsi  formControlName="provinsi" >
+                            <option value="">Pilih Provinsi</option>
+                        </select>
+                    </div>   
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-control"  id="kabupaten" #kabupaten  formControlName="kabupaten" >
+                            <option value="">Pilih kabupaten</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <select class="form-control"  id="kecamatan" #kecamatan  formControlName="kecamatan" >
+                    <option value="">Pilih kecamatan</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <select class="form-control"  id="desa" #desa  formControlName="desa" >
+                            <option value="">Pilih desa</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="RT">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="RW">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-dark form-control">Simpan Data</button>
+            </div>
+
+        </form>
+
+      </div>
+    </div>
+</div>

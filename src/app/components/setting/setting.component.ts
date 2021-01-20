@@ -22,6 +22,7 @@ export class SettingComponent implements OnInit {
       desa: new FormControl('', [Validators.required]),
       sebutanDesa: new FormControl('', [Validators.required]),
       kodepos: new FormControl('', [Validators.required]),
+      statusKab: new FormControl('', [Validators.required]),
     }),
     kontak:new FormGroup({
       telepon:new FormControl('', [Validators.required]),
@@ -84,6 +85,8 @@ export class SettingComponent implements OnInit {
             this.onKecamatanSelect(result['alamat'].kecamatan, result['adds'].kodekab)
 
             form.get('alamat.desa').setValue(result['alamat'].desa)
+            
+            form.get('alamat.statusKab').setValue(result['alamat'].statusKab)
 
             // kontak
             form.get('kontak.telepon').setValue(result['kontak'].telepon)

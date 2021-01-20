@@ -27,6 +27,9 @@ import { CreateSuratComponent } from './components/create-surat/create-surat.com
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { AddDataMasyarakatComponent } from './components/add-data-masyarakat/add-data-masyarakat.component';
+
 
 
 @NgModule({
@@ -41,6 +44,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SettingComponent,
     EmailVerificationComponent,
     CreateSuratComponent,
+    AddDataMasyarakatComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -55,6 +59,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     MatAutocompleteModule,
     NgbModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
